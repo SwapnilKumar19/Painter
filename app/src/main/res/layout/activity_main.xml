@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+   <RelativeLayout
+       android:id="@+id/canvas"
+       android:layout_above="@id/toolBar"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <include layout="@layout/paint_view"/>
+
+
+
+   </RelativeLayout>
+
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/toolBar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center"
+       android:layout_alignParentBottom="true"
+       android:background="@drawable/toolbar_background">
+
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/redColor"
+          android:background="@drawable/red_background"
+          android:layout_margin="10dp"/>
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/blueColor"
+          android:background="@drawable/blue_background"
+          android:layout_margin="10dp"/>
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/blackColor"
+          android:background="@drawable/black_background"
+          android:layout_margin="10dp"/>
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/whiteColor"
+          android:background="@drawable/white_background"
+          android:layout_margin="10dp"/>
+   </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
